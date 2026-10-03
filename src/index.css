@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Base custom styles for our production theme */
+html, body {
+  background-color: #09090b; /* Zinc 950 */
+  color: #f4f4f5; /* Zinc 100 */
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  letter-spacing: -0.011em;
+}
+
+/* Custom scrollbars for a refined look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #18181b; /* Zinc 900 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f3f46; /* Zinc 700 */
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b; /* Zinc 600 */
+}
+
+/* Custom selection styling */
+::selection {
+  background-color: rgba(59, 130, 246, 0.2); /* Soft blue transparent highlight */
+  color: #60a5fa; /* light blue */
+}
+
+/* Smooth motion utility classes */
+.blur-glow {
+  position: relative;
+}
+
+.blur-glow::after {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(10px);
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Chordbase",
+  "description": "A production-grade document import engine that parses multi-language chord sheets into a canonical structured database.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
